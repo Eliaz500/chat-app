@@ -1,12 +1,15 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "./services/firebase";
 import Login from "./componets/Login";
 import Loading from "./componets/Loading";
+import Sidebar from "./componets/Sidebar";
+import * as C from "./styles/app"
 
 
 const App = () => {
     const [user, loading] = useAuthState(auth);
+    const [userChat, setUserChat] = useState(null);
 
     useEffect(() => {
         if (user){
@@ -21,7 +24,11 @@ const App = () => {
 
     if (!user) return <Login />;
 
-    return <div>Chat APP</div>;
+    return (
+        <C.Container>
+            <Sidebar setUserChat={setUserChat} userChat={userChat}/>
+        </ C.Container>
+    );
 };
 
 export default App;
