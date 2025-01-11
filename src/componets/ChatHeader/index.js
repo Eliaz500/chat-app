@@ -1,0 +1,8 @@
+import react from "react";
+
+
+const ChatHeader = () => {
+    return <div>ChatHeader</div>
+};
+
+export default ChatHeader;

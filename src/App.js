@@ -5,6 +5,7 @@ import Login from "./componets/Login";
 import Loading from "./componets/Loading";
 import Sidebar from "./componets/Sidebar";
 import * as C from "./styles/app"
+import Chat from "./componets/Chat";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
     return (
         <C.Container>
             <Sidebar setUserChat={setUserChat} userChat={userChat}/>
+            <Chat userChat={userChat} />
         </ C.Container>
     );
 };
