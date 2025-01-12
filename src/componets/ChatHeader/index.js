@@ -3,13 +3,13 @@ import * as C from "./styles"
 import { MdPerson, MdMoreVert, MdSearch } from "react-icons/md";
 
 
-const ChatHeader = ({ photoURL, nome}) => {
+const ChatHeader = ({ photoURL, name}) => {
     return (
         <C.Container>
             <C.UserInfo>
                 {photoURL ? (<C.Avatar src={photoURL} alt="Avatar"/>) : (<MdPerson />)}
                 <C.NomeContent>
-                    <C.Nome>{nome}</C.Nome>
+                    <C.Nome>{name}</C.Nome>
                 </C.NomeContent>
             </C.UserInfo>
             <C.Options>

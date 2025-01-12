@@ -3,9 +3,12 @@ import * as C from "./styles"
 import ChatBody from "../ChatBody";
 import ChatFooter from "../ChatFooter";
 import ChatHeader from "../ChatHeader";
+import Default from "../Default";
 
 
 const Chat = ({ userChat}) => {
+    if (!userChat) return <Default />;
+    
     return (
         <C.Container>
             <ChatHeader photURL={userChat?.photURL} name={userChat?.name} />
