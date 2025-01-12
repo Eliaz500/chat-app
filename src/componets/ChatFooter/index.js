@@ -31,6 +31,7 @@ const ChatFooter = ({ chatId}) => {
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                 />
+                <MdSend onClick={handleSendMessage} />
             </C.Form>
         </C.Container>    
     );

@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import * as C from "./styles"
 import ChatBody from "../ChatBody";
 import ChatFooter from "../ChatFooter";
